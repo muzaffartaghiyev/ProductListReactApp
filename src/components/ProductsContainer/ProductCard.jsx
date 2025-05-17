@@ -1,23 +1,19 @@
-import React, { useState } from 'react'
-
 import { FaHeart } from "react-icons/fa";
 
-const ProductCard = ({product}) => {
-
-    const [prod, setProd] = useState(product)
+const ProductCard = ({product,onToggleSaved}) => {
 
   return (
     <div className="product-card">
-        <FaHeart className={`heart ${prod.saved ?'red-heart' : ''}`} onClick={()=>setProd({...prod,saved:!prod.saved})}/>
+        <FaHeart className={`heart ${product.saved ?'red-heart' : ''}`} onClick={()=>onToggleSaved(product.id)}/>
         <div className="price">
-            <h3>{prod.price} $</h3>
+            <h3>{product.price} $</h3>
             
         </div>
         
-        <img src={prod.image} alt="" />
+        <img src={product.image} alt="" />
         
         <div className="title-container">
-            <h2>{prod.title}</h2>
+            <h2>{product.title}</h2>
         </div>
     </div>
   )
