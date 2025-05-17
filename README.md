@@ -7,6 +7,7 @@ The **Products List Application** is a React-based app that allows users to view
 
 ## Preview
 
+![product_lists_app-ezgif com-optimize](https://github.com/user-attachments/assets/89ccc3cf-e831-45a0-b2fd-57767d4a03b4)
 
 
 ## Features
