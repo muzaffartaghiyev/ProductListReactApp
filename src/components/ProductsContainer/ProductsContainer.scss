@@ -1,0 +1,77 @@
+.products-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap:30px;
+    padding: 20px;
+
+    .product-card{
+    height: 450px;
+    overflow: hidden;
+    width: 350px;
+    position: relative;
+
+        .heart{
+            position: absolute;
+            z-index: 2;
+            font-size: 2rem;
+            right: 10px;
+            top: 10px;
+            cursor: pointer;
+        }
+
+        .red-heart{
+            color: red;
+        }
+
+        .price{
+        position: absolute;
+        left: 50%;
+        top:50%;
+        background-color: rgba(0, 0, 0, 0.8);
+        color: #fff;
+        padding: 1rem;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        /* it is important for centering the element with alongside absolute positioning */
+        transform: translate(-50%,-50%);
+        z-index: 2;
+        }
+
+        img{
+            border-radius: 10px;
+            object-fit: cover;
+            width: 100%;
+            height: 450px;
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+
+        .title-container{
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 10px;
+            padding:1rem;
+            color: #fff;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            max-height:75%;
+            font-size: 1.2rem;
+            transition: transform 0.7s ease-in-out;
+            transform: translateX(100%);
+            width: 100%;
+            overflow: auto;
+            text-align: justify;
+            z-index: 3;
+        }
+
+        &:hover {
+            .title-container{
+                transform: translateX(0);}
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}
